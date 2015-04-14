@@ -1,0 +1,7 @@
+{
+  "rules": {
+    // Let everyone read and write to the "chat" node
+    ".read": true,
+    ".write": true
+  }
+}

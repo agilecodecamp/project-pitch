@@ -1,0 +1,10 @@
+{
+  "firebase": "project-pitch",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "rules": "rules.json"
+}

@@ -1,0 +1,70 @@
+<div class="project-ctn" ng-show="Datas">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="row">
+			<!--
+			<div class="">
+		    <ul class="nav nav-tabs">
+		    	<li class="active">
+		    		<a ng-href="#project/{{projectID}}/all">All</a></li>
+		    	<li><a href="#project/{{projectID}}/talent">Talent</a></li>
+		    </ul>
+		  </div>
+		  -->
+
+			<!-- Post Panel -->
+			<div class="panel panel-default" ng-show="user.uid === Datas.uid">
+
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-md-12">
+							<form>
+								<textarea class="form-control" rows="3" ng-model="content"></textarea>
+								<div class="top-buffer">
+									<div class="pull-right">
+										<button type="button" class="btn btn-primary" ng-click="doPost(content)">Post</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+
+			<div class="panel panel-default">
+
+
+			  <div class="panel-body">
+
+		   		<h2 ng-bind="Datas.projectName"></h2>
+					
+					<div>
+		    		<div>Why start up this project?</div>
+		    		<div ng-bind="Datas.first"></div>
+		    	</div>
+		    	
+		    	<div>
+		    		<div>What is the startup project?</div>
+		    		<div ng-bind="Datas.second"></div>
+		    	</div>
+
+		    	<div>
+		    		<div for="third">What is special about your project?</div>
+		    		<div ng-bind="Datas.third"></div>
+		    	</div>
+
+		    	<div>
+		    		<div>How to reach your potential target user?</div>
+		    		<div ng-bind="Datas.fourth"></div>
+		    	</div>
+
+			  </div>
+			</div>
+			
+		</div>
+	  
+	</div>
+</div>
