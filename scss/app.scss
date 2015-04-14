@@ -28,7 +28,7 @@ body {
 }
 
 .top-buffer {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .navbar {
@@ -66,12 +66,13 @@ body {
     margin: 10px 5px 0 5px;
   }
 
-  .join-ctn {
-    margin-top: 20px;
-    
+}
+
+.project-ctn {
+  .join-ctn {    
     .item {
       cursor: default;
-      margin: 0px 5px;
+      margin: 5px;
       height: 30px;
       border-radius: 15px;
       border: 1px solid #337ab7;
@@ -95,7 +96,6 @@ body {
     }
   }
 }
-
 
 // 卡片
 .card {

@@ -29,39 +29,51 @@
 			$state.go('home');
 		};
 
+		$scope.getTitle = function (name) {
+			var user = $scope.user;
+			if (name === 'Join ?') {
+				return "join";
+			} else if (user && name === user[user.provider].displayName) {
+				return 'leave';
+			} else {
+				return '';
+			}
+		};
+
 		$scope.wantJoin = function (index) {
 			var user = $scope.user;
 			if (!user) {
 				return;
 			}
 
-			var username = user[user.provider].displayName;
-
 			// you are founder, not join self project
-			if (username === $scope.Datas.createName) {
+			if (user.uid === $scope.Datas.uid) {
 				return;
 			}
+
+			var username = user[user.provider].displayName;
 
 			var partners = $scope.partners;
 			var item = partners[index];
 
-			// click on not join item
-			if (item.$value !== 'Join ?') {
+			// click on not join item and you are not this guy
+			if (item.name !== 'Join ?' && username !== item.name) {
 				return;
 			}
 
 			// find you is in project or not
 			var search = partners.findIndex(function (data) {
-				return data.$value === username;
+				return data.name === username;
 			});
-
-			// you are in project
 			if (search !== -1) {
-				return;
+				// you are in project
+				item.uid = "";
+				item.name = "Join ?";
+			} else {
+				// join project
+				item.uid = user.uid;
+				item.name = username;
 			}
-
-			// join project
-			item.$value = username;
 
 			// save to firebase
 			$scope.partners.$save(index)

@@ -41,7 +41,7 @@ body {
   padding-top: 70px; }
 
 .top-buffer {
-  margin-top: 20px; }
+  padding-top: 20px; }
 
 .navbar {
   background-color: #FFF;
@@ -66,23 +66,22 @@ body {
     color: white; }
   .create-ctn button {
     margin: 10px 5px 0 5px; }
-  .create-ctn .join-ctn {
-    margin-top: 20px; }
-    .create-ctn .join-ctn .item {
-      cursor: default;
-      margin: 0px 5px;
-      height: 30px;
-      border-radius: 15px;
-      border: 1px solid #337ab7; }
-      .create-ctn .join-ctn .item:hover {
-        background-color: #5bc0de;
-        color: white; }
-      .create-ctn .join-ctn .item.join, .create-ctn .join-ctn .item.remove {
-        cursor: pointer; }
-      .create-ctn .join-ctn .item.join:hover {
-        background-color: #337ab7; }
-      .create-ctn .join-ctn .item.remove:hover {
-        background-color: #d9534f; }
+
+.project-ctn .join-ctn .item {
+  cursor: default;
+  margin: 5px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #337ab7; }
+  .project-ctn .join-ctn .item:hover {
+    background-color: #5bc0de;
+    color: white; }
+  .project-ctn .join-ctn .item.join, .project-ctn .join-ctn .item.remove {
+    cursor: pointer; }
+  .project-ctn .join-ctn .item.join:hover {
+    background-color: #337ab7; }
+  .project-ctn .join-ctn .item.remove:hover {
+    background-color: #d9534f; }
 
 .card {
   height: 350px;
