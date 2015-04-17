@@ -5,6 +5,7 @@
 
 $light-blue: #5FB0E4;
 $white: white;
+$gray: #dddddd;
 
 @keyframes fadeIn {
   0% {opacity: 0;}
@@ -77,10 +78,28 @@ body {
 
 .project-ctn {
 
-  img {
+  img.logo {
     width: 100%;
     padding: 20px;
     background-size: contain;
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+    
+    .tab a {
+      cursor: pointer;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  .project-question {
+    border: 1px solid $gray;
+    padding: 15px;
+    
+    border-radius: 4px;
+    border-top-left-radius: 0;
   }
 
   .join-ctn {
@@ -149,7 +168,13 @@ body {
   }
 }
 
-.project-ctn {
-  .row {
+.activity-ctn {
+  .post-ctn {
+    padding: 15px;
+    
+    img {
+      background-size: contain;
+      background-position: center center;
+    }
   }
 }

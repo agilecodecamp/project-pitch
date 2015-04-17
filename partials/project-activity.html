@@ -1,0 +1,42 @@
+<div class="activity-ctn">
+	
+	<!-- Post Panel -->
+	<div class="panel panel-default post-ctn" ng-show="Datas.uid === user.uid">
+		<div class="panel-body top-buffer">
+			<div class="row">
+				<div class="col-md-12">
+					<form ng-submit="addPost(content, img.url, img.show)">
+						<textarea class="form-control" rows="4" ng-model="content" placeholder="update your newest event."></textarea>
+						<div class="form-group top-buffer" ng-show="img.show">
+							<input type="text" class="form-control" ng-model="img.url" placeholder="image url">
+						</div>
+						<div class="top-buffer">
+							<button type="button" class="btn btn-default" title="location" ng-click="toggleImageUrls()">
+							  <span class="glyphicon glyphicon-camera" title="add photo" aria-hidden="true"></span>
+							</button>
+							<div class="pull-right col-md-2">
+								<button type="submit" class="col-md-12 btn btn-primary">Post</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default post-ctn" ng-repeat="post in posts | orderBy:'createAt':true track by $index">
+		<div class="panel-body">
+			<div class="row">
+				<div class="flex-center">
+					<img ng-src="{{post.imgUrl}}" ng-show="post.imgUrl">
+				</div>
+				<p ng-bind="post.content"></p>
+			</div>
+			<div class="row">
+				<!-- <button class="btn btn-danger" ng-show="user.uid === Datas.uid" ng-click="deletePost(post)">delete</button> -->
+				<span class="pull-right" ng-bind="post.createAt | date : 'yyyy-MM-dd HH:mm'"></span>
+			</div>
+		</div>
+	</div>
+
+</div>

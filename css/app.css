@@ -71,10 +71,21 @@ body {
   .create-ctn button {
     margin: 10px 5px 0 5px; }
 
-.project-ctn img {
+.project-ctn img.logo {
   width: 100%;
   padding: 20px;
   background-size: contain; }
+.project-ctn .nav-tabs {
+  border-bottom: none; }
+  .project-ctn .nav-tabs .tab a {
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 50px; }
+.project-ctn .project-question {
+  border: 1px solid #dddddd;
+  padding: 15px;
+  border-radius: 4px;
+  border-top-left-radius: 0; }
 .project-ctn .join-ctn .item {
   cursor: default;
   margin: 5px;
@@ -116,3 +127,8 @@ body {
       background-color: pink;
       color: white; }
 
+.activity-ctn .post-ctn {
+  padding: 15px; }
+  .activity-ctn .post-ctn img {
+    background-size: contain;
+    background-position: center center; }

@@ -1,7 +1,7 @@
 <div class="project-ctn" ng-show="Datas">
 	<div class="col-md-2 flex-column flex-center">
 			<div class="row">
-				<img ng-src="{{Datas.logoUrl}}" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" class="img-rounded">
+				<img class="logo" ng-src="{{Datas.logoUrl}}" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" class="img-rounded">
 			</div>
  			<div class="row top-buffer">
 			<span ng-bind="Datas.teamName"></span>
@@ -22,65 +22,16 @@
 				<button class="btn btn-success col-md-10 col-md-offset-1" ng-click="goEdit()">Edit</button>
 			</div>
 
-			<!-- delte -->
-			<div class="col-md-12 top-buffer" ng-show="Datas.uid === user.uid">
-				<button class="btn btn-danger col-md-10 col-md-offset-1">Delete</button>
-			</div>
-
 		</div>
 	</div>
 
-	<div class="col-md-8">
+	<div class="col-md-10">
+    <ul class="nav nav-tabs">
+    	<li class="tab" ng-class="{active: current.name === 'project.profile'}"><a ng-click="goChildState(projectID, 'profile')">Profile</a></li>
+    	<li class="tab" ng-class="{active: current.name === 'project.activity'}"><a ng-click="goChildState(projectID, 'activity')">Activity</a></li>
+    </ul>
 
-	  <!-- Post Panel -->
-		<div class="row" ng-show="Datas.uid === user.uid">
-			<div class="panel panel-default">
-
-				<div class="panel-heading top-buffer">
-					<div class="row">
-						<div class="col-md-12">
-							<form>
-								<textarea class="form-control" rows="4" ng-model="content"></textarea>
-								<div class="top-buffer">
-									<button type="button" class="btn btn-default" title="location">
-									  <span class="glyphicon glyphicon-camera" title="add photo" aria-hidden="true" ng-click="addImageUrls()"></span>
-									</button>
-									<div class="pull-right">
-										<button type="button" class="btn btn-primary" ng-click="doPost(content)">Post</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="row">
-			<div class="panel panel-default">
-			  <div class="panel-body">
-		   		<h2 ng-bind="Datas.projectName"></h2>
-					<div>
-		    		<div>Why start up this project?</div>
-		    		<div ng-bind="Datas.first"></div>
-		    	</div>
-		    	<div>
-		    		<div>What is the startup project?</div>
-		    		<div ng-bind="Datas.second"></div>
-		    	</div>
-		    	<div>
-		    		<div for="third">What is special about your project?</div>
-		    		<div ng-bind="Datas.third"></div>
-		    	</div>
-		    	<div>
-		    		<div>How to reach your potential target user?</div>
-		    		<div ng-bind="Datas.fourth"></div>
-		    	</div>
-			  </div>
-			</div>
-		</div>
-
+		<ui-view></ui-view>
 	</div>
 	
 </div>

@@ -10,15 +10,9 @@
 				$scope.projects = list;
 			});
 
-		$scope.test = {
-			projectName: 'test'
-		};
-
 		$scope.goProject = function (id) {
-			$state.go('project', {
+			$state.go('project.profile', {
 				id: id
-			}, {
-				location: false
 			});
 		};
 

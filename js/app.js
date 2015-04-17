@@ -14,9 +14,19 @@
 	      controller: 'createCtrl'
 	    })
 	    .state('project', {
+	    	abstract: true,
 	      url: "/project/:id",
 	      templateUrl: "partials/project.html",
 	      controller: 'projectCtrl'
+	    })
+	    .state('project.profile', {
+	    	url: '/profile',
+	    	templateUrl: 'partials/project-profile.html'
+	    })
+	    .state('project.activity', {
+	    	url: '/activity',
+	    	templateUrl: 'partials/project-activity.html',
+	    	controller: 'projectActivityCtrl'
 	    })
 	    .state('edit', {
 	      url: "/edit/:id",

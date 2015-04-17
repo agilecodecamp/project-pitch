@@ -5,12 +5,19 @@
 
 		$scope.projectID = $stateParams.id;
 
+		$scope.current = {
+			name: $state.current.name
+		};
+
 		var list = $firebaseObject(new Firebase('https://project-pitch.firebaseio.com/projects/' + $scope.projectID));
 
 		list
 			.$loaded(function (data) {
 				if (data.$value === null) {
 					$scope.notFound = {};
+					$state.go('home', {}, {
+						location: 'replace'
+					});
 				} else {
 					$scope.notFound = null;
 
@@ -26,7 +33,9 @@
 			});
 
 		$scope.goHome = function () {
-			$state.go('home');
+			$state.go('home', {}, {
+				location: 'replace'
+			});
 		};
 
 		$scope.getTitle = function (name) {
@@ -38,6 +47,14 @@
 			} else {
 				return '';
 			}
+		};
+
+		$scope.goChildState = function (projectID, state) {
+			var stateTo = 'project.' + state;
+			$scope.current.name = stateTo;
+			$state.go(stateTo, {}, {
+				location: 'replace'
+			});
 		};
 
 		$scope.goEdit = function () {
