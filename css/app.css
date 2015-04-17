@@ -61,12 +61,20 @@ body {
 
 .create-ctn {
   padding-top: 20px; }
+  .create-ctn img {
+    width: 100%;
+    padding: 20px;
+    background-size: contain; }
   .create-ctn .panel-heading {
     background-color: #5FB0E4;
     color: white; }
   .create-ctn button {
     margin: 10px 5px 0 5px; }
 
+.project-ctn img {
+  width: 100%;
+  padding: 20px;
+  background-size: contain; }
 .project-ctn .join-ctn .item {
   cursor: default;
   margin: 5px;

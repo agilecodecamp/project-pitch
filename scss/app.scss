@@ -56,6 +56,13 @@ body {
 
 .create-ctn {
   padding-top: 20px;
+
+  img {
+    width: 100%;
+    padding: 20px;
+    background-size: contain;
+  }
+
   
   .panel-heading {
     background-color: $light-blue;
@@ -69,7 +76,14 @@ body {
 }
 
 .project-ctn {
-  .join-ctn {    
+
+  img {
+    width: 100%;
+    padding: 20px;
+    background-size: contain;
+  }
+
+  .join-ctn {
     .item {
       cursor: default;
       margin: 5px;
@@ -93,6 +107,7 @@ body {
       &.remove:hover {
        background-color: #d9534f; 
       }
+
     }
   }
 }

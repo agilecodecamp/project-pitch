@@ -7,6 +7,8 @@
 			$state.go('home');
 		}
 
+		$scope.buttonPrimary = "Create";
+
 		var ref = new Firebase('https://project-pitch.firebaseio.com/projects');
 
 		var list = $firebaseArray(ref);

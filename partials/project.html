@@ -1,7 +1,7 @@
 <div class="project-ctn" ng-show="Datas">
 	<div class="col-md-2 flex-column flex-center">
 			<div class="row">
-				<img ng-src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" alt="140x140" class="img-thumbnail">
+				<img ng-src="{{Datas.logoUrl}}" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" class="img-rounded">
 			</div>
  			<div class="row top-buffer">
 			<span ng-bind="Datas.teamName"></span>
@@ -16,6 +16,17 @@
 			<div class="join-ctn col-md-12 flex-center" ng-repeat="partner in partners track by $index" ng-click="wantJoin($index)" ng-attr-title="{{getTitle(partner.name)}}">
 				<span class="item col-md-10 flex-center" ng-class="{join : !partner.uid, remove : partner.uid === user.uid}" ng-bind="partner.name"></span>
 			</div>
+
+			<!-- edit -->
+			<div class="col-md-12 top-buffer" ng-show="Datas.uid === user.uid">
+				<button class="btn btn-success col-md-10 col-md-offset-1" ng-click="goEdit()">Edit</button>
+			</div>
+
+			<!-- delte -->
+			<div class="col-md-12 top-buffer" ng-show="Datas.uid === user.uid">
+				<button class="btn btn-danger col-md-10 col-md-offset-1">Delete</button>
+			</div>
+
 		</div>
 	</div>
 

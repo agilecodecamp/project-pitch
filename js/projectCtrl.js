@@ -40,6 +40,12 @@
 			}
 		};
 
+		$scope.goEdit = function () {
+			$state.go('edit', {
+				id: $scope.projectID
+			});
+		};
+
 		$scope.wantJoin = function (index) {
 			var user = $scope.user;
 			if (!user) {

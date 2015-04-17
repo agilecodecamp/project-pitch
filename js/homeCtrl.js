@@ -10,9 +10,15 @@
 				$scope.projects = list;
 			});
 
+		$scope.test = {
+			projectName: 'test'
+		};
+
 		$scope.goProject = function (id) {
 			$state.go('project', {
 				id: id
+			}, {
+				location: false
 			});
 		};
 

@@ -17,6 +17,11 @@
 	      url: "/project/:id",
 	      templateUrl: "partials/project.html",
 	      controller: 'projectCtrl'
+	    })
+	    .state('edit', {
+	      url: "/edit/:id",
+	      templateUrl: "partials/create.html",
+	      controller: 'updateProjectCtrl'
 	    });
 
 	  $urlRouterProvider.otherwise("home");
