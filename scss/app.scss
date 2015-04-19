@@ -1,28 +1,7 @@
-/*
-* Chat Animations
-*
-*/
-
+$primary: #337ab7;
 $light-blue: #5FB0E4;
 $white: white;
 $gray: #dddddd;
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
 
 body {
   padding-top: 70px;

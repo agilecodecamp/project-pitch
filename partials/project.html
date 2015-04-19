@@ -10,7 +10,7 @@
 		<div class="row top-buffer">
 			<!-- Founder -->
 			<div class="join-ctn col-md-12 flex-center">
-				<span class="item col-md-10 flex-center founder" ng-bind="Datas.createName"></span>
+				<span class="item col-md-10 flex-center founder" ng-bind="Datas.founder"></span>
 			</div>
 
 			<div class="join-ctn col-md-12 flex-center" ng-repeat="partner in partners track by $index" ng-click="wantJoin($index)" ng-attr-title="{{getTitle(partner.name)}}">
@@ -25,7 +25,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-10">
+	<div class="col-md-8">
     <ul class="nav nav-tabs">
     	<li class="tab" ng-class="{active: current.name === 'project.profile'}"><a ng-click="goChildState(projectID, 'profile')">Profile</a></li>
     	<li class="tab" ng-class="{active: current.name === 'project.activity'}"><a ng-click="goChildState(projectID, 'activity')">Activity</a></li>

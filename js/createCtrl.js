@@ -18,7 +18,7 @@
 		$scope.submitForm = function () {
 
 			$scope.Datas.uid = $scope.user.uid;
-			$scope.Datas.createName = $scope.user[$scope.user.provider].displayName;
+			$scope.Datas.founder = $scope.user[$scope.user.provider].displayName;
 			$scope.Datas.createAt = Date.now();
 			$scope.Datas.partners = Array.apply(null, Array(5)).map(function() { 
 				return {

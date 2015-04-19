@@ -1,0 +1,67 @@
+$primary: #337ab7;
+$light-blue: #5FB0E4;
+$white: white;
+$gray: #dddddd;
+
+
+.project-panel {
+
+	cursor: default;
+	
+	border-radius: 4px;
+	border: 1px solid $gray;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	padding: 15px;
+
+	height: 170px;
+	
+	& > div {
+		height: 100%;
+	}
+
+	.img-ctn {
+		padding: 5px;
+		.img-rounded {
+			width: 170px;
+			background-size: cover;
+		}
+	}
+
+	.project-name {
+		font-size: 2em;
+		color: $primary;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		
+		cursor: pointer;
+	}
+
+	.project-info-ctn {
+		
+		padding: 5px 0;
+
+		.team-name {
+			font-weight: bold;
+		}
+
+		.founder {
+			
+		}
+	}
+	
+	.question-first {
+		text-indent: 1.5em;
+		word-break: break-all;
+		text-overflow: ellipsis;
+		height: 3em;
+		overflow: hidden;
+	}
+
+  .go-detail {
+    cursor: pointer;
+    color: $primary;
+  }
+}

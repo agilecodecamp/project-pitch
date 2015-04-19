@@ -1,0 +1,36 @@
+$primary: #337ab7;
+$gray: #dddddd;
+
+
+.project-question {
+	
+	cursor: default;
+
+	.name {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 3em;
+		color: $primary;
+	}
+
+	.question-block {
+	}
+
+	.question {
+		font-size: 2em;
+		padding: 2px;
+		font-weight: bold;
+	}
+	
+	pre.answer {
+		border: none;
+		background-color: inherit;
+		overflow-y: hidden;
+		margin-bottom: 5px;
+	}
+
+	.answer {
+		padding: 0;
+		padding-left: 1em;
+	}
+}

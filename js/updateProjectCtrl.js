@@ -34,7 +34,7 @@
 			project
 				.$save()
 				.then(function (ref) {
-					$state.go('project', {
+					$state.go('project.profile', {
 						id: $scope.projectID
 					}, {
 						location: 'replace'

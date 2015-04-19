@@ -1,16 +1,18 @@
-<div class="row col-md-10 col-md-offset-1" ng-repeat="project in projects | orderBy:'createAt':true track by $index">
+<div class="row col-md-8 col-md-offset-2 project-panel" ng-repeat="project in projects | orderBy:'createAt':true track by $index">
 	<!-- message -->
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<div class="row">
-				<div class="col-md-3 flex-center">
-					<img class="img-rounded col-md-12" alt="140x140" ng-src="{{project.logoUrl}}" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=">
-				</div>
-				<div class="col-md-9">
-					<project-question project="project"></project-question>
-					<button ng-click="goProject(project.$id)" class="btn btn-primary pull-right">go details</button>
-				</div>
+	<div class="col-md-4 flex-center img-ctn">
+		<img class="img-rounded col-md-12" alt="140x140" ng-src="{{project.logoUrl}}" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=">
+	</div>
+	<div class="col-md-8 flex-column">
+		<div class="flex-1">
+			<div class="project-name" ng-bind="project.projectName" ng-click="goProject(project.$id)"></div>
+			<div class="project-info-ctn">
+				<span class="team-name"ng-bind="project.teamName"></span> - <span class="founder" ng-bind="project.founder"></span>
 			</div>
+			<div class="question-first" ng-bind="project.first"></div>
+		</div>
+		<div>
+			<span class="pull-right go-detail" ng-click="goProject(project.$id)">view profile</span>
 		</div>
 	</div>
 </div>

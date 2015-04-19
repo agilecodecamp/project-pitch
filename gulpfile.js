@@ -4,6 +4,7 @@ var autoprefixer    = require('gulp-autoprefixer');
 var minifyCSS       = require('gulp-minify-css');
 var connect         = require('gulp-connect');
 var openPage        = require("gulp-open");
+var concatCSS          = require("gulp-concat-css");
 
 
 
@@ -30,6 +31,7 @@ gulp.task('css', function() {
   var stream = gulp.src('scss/**/*.scss')
       .pipe(sass())
       .pipe(autoprefixer())
+      .pipe(concatCSS('app.css'))
       // .pipe(minifyCSS({ noAdvanced: true }))
       .pipe(gulp.dest('css'))
       .pipe(connect.reload());
