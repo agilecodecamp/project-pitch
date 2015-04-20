@@ -29,6 +29,12 @@
 						.$loaded(function (data) {
 							$scope.partners = data;
 						});
+
+					// votes
+					var votes = $firebaseArray(data.$ref().child('votes'))
+						.$loaded(function (data) {
+							$scope.votes = data;
+						});
 				}
 			});
 
@@ -102,6 +108,35 @@
 			$scope.partners.$save(index)
 				.catch(function (error) {
 				});
+		};
+
+		// Vote click
+		$scope.addVote = function () {
+
+			if (!$scope.user) {
+				// need login first
+				return;
+			}
+
+			if (!$scope.votes) {
+				// votes not loaded
+				return;
+			}
+
+			var voteIndex = $scope.votes.findIndex(function (data) {
+				return data.uid === $scope.user.uid;
+			});
+
+			if (voteIndex === -1) {
+				// you can vote
+				$scope.votes.$add({
+					uid: $scope.user.uid,
+					name: $scope.user[$scope.user.provider].displayName
+				});
+			} else {
+				// you can't not vote
+				return;
+			}
 		};
 	}]);
 

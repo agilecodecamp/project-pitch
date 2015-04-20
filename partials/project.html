@@ -21,6 +21,15 @@
 			<div class="col-md-12 top-buffer" ng-show="Datas.uid === user.uid">
 				<button class="btn btn-success col-md-10 col-md-offset-1" ng-click="goEdit()">Edit</button>
 			</div>
+			
+			<div class="col-md-12 top-buffer flex-center votes-ctn">
+				Votes: <span ng-bind="votes.length"></span>
+			</div>
+
+			<!-- Vote -->
+			<div class="col-md-12 top-buffer">
+				<button class="btn but-default col-md-10 col-md-offset-1" ng-click="addVote()">Vote</button>
+			</div>
 
 		</div>
 	</div>
