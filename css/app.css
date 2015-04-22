@@ -357,6 +357,24 @@ body {
   -ms-flex: 6;
   flex: 6;
 }
+.meal {
+  font-size: 4em;
+}
+
+.meal button {
+  font-size: 1em;
+  color: #5FB0E4;
+}
+
+.meal img {
+  width: 60%;
+  padding: 30px;
+}
+
+.meal .price {
+  font-size: 0.75em;
+  color: rgba(0, 0, 0, 0.6);
+}
 .project-ctn img.logo {
   width: 100%;
   padding: 20px;

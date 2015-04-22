@@ -32,6 +32,11 @@
 	      url: "/edit/:id",
 	      templateUrl: "partials/create.html",
 	      controller: 'updateProjectCtrl'
+	    })
+	    .state('lunch', {
+	      url: "/lunch",
+	      templateUrl: "partials/lunch.html",
+	      controller: 'mealCtrl'
 	    });
 
 	  $urlRouterProvider.otherwise("home");
