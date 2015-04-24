@@ -1,5 +1,5 @@
 {
-  "rules": 
+  "rules": {
     "projects": {
       ".read": true,
       "$projects": {
