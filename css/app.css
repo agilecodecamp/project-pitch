@@ -103,6 +103,15 @@ body {
   border: none;
   text-indent: 2em;
 }
+
+.activity-ctn .message-ctn {
+  padding: 15px;
+}
+
+.activity-ctn .message-ctn img {
+  max-width: 100%;
+  margin: 10px 0;
+}
 @charset "UTF-8";
 
 /**
