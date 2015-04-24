@@ -9,7 +9,7 @@
 
 		$scope.buttonPrimary = "Create";
 
-		var ref = new Firebase('https://project-pitch.firebaseio.com/projects');
+		var ref = new Firebase('https://platfone.firebaseio.com/projects');
 
 		var list = $firebaseArray(ref);
 

@@ -9,7 +9,7 @@
 			name: $state.current.name
 		};
 
-		var list = $firebaseObject(new Firebase('https://project-pitch.firebaseio.com/projects/' + $scope.projectID));
+		var list = $firebaseObject(new Firebase('https://platfone.firebaseio.com/projects/' + $scope.projectID));
 
 		list
 			.$loaded(function (data) {

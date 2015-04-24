@@ -3,7 +3,7 @@
 	
 	app.controller('navCtrl', ['$scope', '$state', '$rootScope', '$firebaseAuth', function ($scope, $state, $rootScope, $firebaseAuth) {
 
-		var ref = new Firebase('https://project-pitch.firebaseio.com');
+		var ref = new Firebase('https://platfone.firebaseio.com');
     $scope.authObj = $firebaseAuth(ref);
 
     var authUser = $scope.authObj.$getAuth();

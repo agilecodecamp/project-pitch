@@ -3,7 +3,7 @@
 	
 	app.controller('mealCtrl', ['$scope', '$state', '$firebaseArray', '$firebaseObject', function ($scope, $state, $firebaseArray, $firebaseObject) {
 
-		var meal = $firebaseObject(new Firebase('https://project-pitch.firebaseio.com/meal'));
+		var meal = $firebaseObject(new Firebase('https://platfone.firebaseio.com/meal'));
 
 		meal
 			.$loaded(function (mealData) {

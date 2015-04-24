@@ -3,7 +3,7 @@
 	
 	app.controller('homeCtrl', ['$scope', '$state', '$firebaseArray', function ($scope, $state, $firebaseArray) {
 
-		var list = $firebaseArray(new Firebase('https://project-pitch.firebaseio.com/projects'));
+		var list = $firebaseArray(new Firebase('https://platfone.firebaseio.com/projects'));
 
 		list
 			.$loaded(function (list) {

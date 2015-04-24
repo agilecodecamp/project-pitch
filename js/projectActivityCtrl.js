@@ -3,7 +3,7 @@
 	
 	app.controller('projectActivityCtrl', ['$scope', '$state', '$firebaseArray', function ($scope, $state, $firebaseArray) {
 
-		var ref = new Firebase('https://project-pitch.firebaseio.com/projects/' + $scope.projectID + '/posts');
+		var ref = new Firebase('https://platfone.firebaseio.com/projects/' + $scope.projectID + '/posts');
 
 		$scope.img = {
 			show: false,

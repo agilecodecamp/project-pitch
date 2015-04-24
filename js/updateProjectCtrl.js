@@ -11,7 +11,7 @@
 			$state.go('home');
 		}
 
-		var ref = new Firebase('https://project-pitch.firebaseio.com/projects/' + $scope.projectID);
+		var ref = new Firebase('https://platfone.firebaseio.com/projects/' + $scope.projectID);
 
 		var project = $firebaseObject(ref);
 
