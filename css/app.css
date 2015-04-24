@@ -98,7 +98,7 @@ body {
   max-height: 350px;
 }
 
-.activity-ctn .post-ctn pre {
+.activity-ctn pre {
   background: transparent;
   border: none;
   text-indent: 2em;
