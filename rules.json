@@ -3,6 +3,7 @@
     "projects": {
       ".read": true,
       "$projects": {
+        ".write": "newData.hasChild('uid') && newData.child('uid').val() === auth.uid",
         "votes": {
           ".write": "auth !== null"
         },
