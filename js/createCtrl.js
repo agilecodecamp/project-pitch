@@ -23,7 +23,7 @@
 			$scope.Datas.partners = Array.apply(null, Array(5)).map(function() { 
 				return {
 					uid: "",
-					name: "Join ?"
+					name: "Join us?"
 				};
 			});
 			
@@ -31,7 +31,7 @@
 				.$add($scope.Datas)
 				.then(function (ref) {
 					$scope.Datas = {};
-					$state.go('project', {
+					$state.go('project.profile', {
 						id: ref.key()
 					});
 				});

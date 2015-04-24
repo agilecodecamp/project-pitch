@@ -30,10 +30,10 @@
 				<div class="flex-center">
 					<img ng-src="{{post.imgUrl}}" ng-show="post.imgUrl">
 				</div>
-				<p ng-bind="post.content"></p>
+				<pre class="top-buffer" ng-bind="post.content"></pre>
 			</div>
 			<div class="row">
-				<!-- <button class="btn btn-danger" ng-show="user.uid === Datas.uid" ng-click="deletePost(post)">delete</button> -->
+				<span ng-show="Datas.uid === user.uid"><button class="btn btn-danger" ng-click="deletePost(post)">delete</button></span>
 				<span class="pull-right" ng-bind="post.createAt | date : 'yyyy-MM-dd HH:mm'"></span>
 			</div>
 		</div>

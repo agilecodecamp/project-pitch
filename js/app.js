@@ -4,7 +4,7 @@
 	app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 		$stateProvider
 	    .state('home', {
-	      url: "/home",
+	      url: "/",
 	      templateUrl: "partials/home.html",
 	      controller: 'homeCtrl'
 	    })
@@ -39,7 +39,7 @@
 	      controller: 'mealCtrl'
 	    });
 
-	  $urlRouterProvider.otherwise("home");
+	  $urlRouterProvider.otherwise("/");
 	}]);
 
 })(angular);

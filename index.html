@@ -20,19 +20,11 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/lunch">Meal (訂餐)</a></li>
-            <li class="dropdown">
+            <li ng-show="user"><a href="#/create">New Project</a></li>
+            <li ng-hide="user" ng-click="doLogin()"><a href="#/login">Login By Facebook</a></li>
+            <li class="dropdown" ng-show="user">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="user-name" ng-bind="loginTitle"></span><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li ng-show="user">
-                  <button class="btn btn-default btn-block">
-                    <a href="#/create">New Project</a>
-                  </button>
-                </li>
-                <li class="divider" ng-show="user"></li>
-                <li ng-hide="user">
-                  <button class="btn btn-primary btn-block" ng-click="doLogin()">Login By Facebook</button>
-                </li>
                 <li ng-show="user">
                   <button class="btn btn-danger btn-block" ng-click="doLogout()">logout</button>
                 </li>

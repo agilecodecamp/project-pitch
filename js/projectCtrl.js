@@ -46,7 +46,7 @@
 
 		$scope.getTitle = function (name) {
 			var user = $scope.user;
-			if (name === 'Join ?') {
+			if (name === 'Join us?') {
 				return "join";
 			} else if (user && name === user[user.provider].displayName) {
 				return 'leave';
@@ -86,7 +86,7 @@
 			var item = partners[index];
 
 			// click on not join item and you are not this guy
-			if (item.name !== 'Join ?' && username !== item.name) {
+			if (item.name !== 'Join us?' && username !== item.name) {
 				return;
 			}
 
@@ -97,7 +97,7 @@
 			if (search !== -1) {
 				// you are in project
 				item.uid = "";
-				item.name = "Join ?";
+				item.name = "Join us?";
 			} else {
 				// join project
 				item.uid = user.uid;

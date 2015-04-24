@@ -32,6 +32,10 @@ body {
     padding: 0 5px;
     box-sizing: border-box;
   }
+
+  a {
+    cursor: pointer;
+  }
 }
 
 .create-ctn {
@@ -99,6 +103,13 @@ body {
     img {
       background-size: contain;
       background-position: center center;
+      max-height: 350px;
+    }
+
+    pre {
+      background: transparent;
+      border: none;
+      text-indent: 2em;
     }
   }
 }

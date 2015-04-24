@@ -29,6 +29,10 @@ body {
   box-sizing: border-box;
 }
 
+.navbar a {
+  cursor: pointer;
+}
+
 .create-ctn {
   padding-top: 20px;
 }
@@ -91,12 +95,25 @@ body {
 .activity-ctn .post-ctn img {
   background-size: contain;
   background-position: center center;
+  max-height: 350px;
+}
+
+.activity-ctn .post-ctn pre {
+  background: transparent;
+  border: none;
+  text-indent: 2em;
 }
 @charset "UTF-8";
 
 /**
  * Flex 系統
  */
+
+.flex-box {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
 
 .flex-row {
   display: -ms-flexbox;
@@ -398,12 +415,18 @@ body {
   border-top-left-radius: 0;
 }
 
+.project-ctn .join-ctn .full {
+  width: 100%;
+}
+
 .project-ctn .join-ctn .item {
+  width: 100%;
   cursor: default;
-  margin: 5px;
+  margin: 5px 0;
   height: 30px;
   border-radius: 15px;
   border: 1px solid #337ab7;
+  box-sizing: border-box;
 }
 
 .project-ctn .join-ctn .item:hover {
@@ -501,6 +524,7 @@ body {
   background-color: inherit;
   overflow-y: hidden;
   margin-bottom: 5px;
+  text-indent: 2em;
 }
 
 .project-question .answer {

@@ -1,7 +1,7 @@
 (function (angular) {
 	var app = angular.module('ppApp');
 	
-	app.controller('projectActivityCtrl', ['$scope', '$firebaseArray', function ($scope, $firebaseArray) {
+	app.controller('projectActivityCtrl', ['$scope', '$state', '$firebaseArray', function ($scope, $state, $firebaseArray) {
 
 		var ref = new Firebase('https://project-pitch.firebaseio.com/projects/' + $scope.projectID + '/posts');
 
@@ -20,14 +20,14 @@
 		};
 
 		$scope.addPost = function (content, imgUrl, addUrl) {
+			if (addUrl && imgUrl) {
+				post.imgUrl = imgUrl;
+			}
+
 			var post = {
 				content: content,
 				createAt: Firebase.ServerValue.TIMESTAMP
 			};
-
-			if (addUrl && imgUrl) {
-				post.imgUrl = imgUrl;
-			}
 
 			$scope.posts
 				.$add(post)
@@ -39,8 +39,8 @@
 		};
 
 		$scope.deletePost = function (item) {
-			// $scope.posts
-			// 	.$remove(item);
+			$scope.posts
+				.$remove(item);
 		};
 
 	}]);
