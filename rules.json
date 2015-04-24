@@ -1,7 +1,18 @@
 {
-  "rules": {
-    // Let everyone read and write to the "chat" node
-    ".read": true,
-    ".write": true
+  "rules": 
+    "projects": {
+      ".read": true,
+      "$projects": {
+        "votes": {
+          ".write": "auth !== null"
+        },
+        "partners": {
+          ".write": "auth !== null"
+        },
+        "$posts": {
+          ".write": "root.child('projects/' + $projects + '/uid').val() === auth.uid"
+        }
+      }  
+    }
   }
 }
